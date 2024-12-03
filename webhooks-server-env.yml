@@ -1,0 +1,27 @@
+name: webhooks-server
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python Version
+  - pip
+  - python=3.10
+  # App Specific Dependencies
+  - conda-forge:asyncpg
+  - conda-forge:psycopg2  # ON UBUNTU: sudo apt install libpq-dev python3-dev
+  - conda-forge:ruff==0.5.3
+  - conda-forge:pytest-dotenv==0.5.2
+  - conda-forge:alembic
+  - conda-forge:fastapi[standard]
+  - pip:
+      - git+https://github.com/gpresearch/dblhava.git  # Lhava's private database repo
+      - git+https://github.com/gpresearch/lhavaconfigs.git  # Lhava's private config management repo
+      - git+https://github.com/gpresearch/pymetrics.git@v0.1.1#egg=pymetrics # `MetricsWriter`
+      - git+https://github.com/gpresearch/pylhava.git@v0.3.40  # Lhava's general python asset repo
+      - aiohttp_retry
+      - async_lru
+      - cachetools==5.4.0
+      - redis>=4.6.0  # make last pip installable to force proper versioning
+      - pytest-timeout==2.3.1
+      - pytimeparse2==1.7.1
+      - pytest-cov==5.0.0
