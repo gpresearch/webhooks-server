@@ -35,6 +35,9 @@ RUN \
     git config --global user.email alex@lhava.io && \
     git config --global url."https://oauth2:${GH_TOKEN}@github.com".insteadOf https://github.com
 
+ENV PYTHONUNBUFFERED=1
+
+
 RUN conda env create -f webhooks-server-env.yml
 
 #https://pythonspeed.com/articles/activate-conda-dockerfile/

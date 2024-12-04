@@ -26,7 +26,13 @@ conda env update --file webhooks-server-env.yml --prune
 
 ## Usage
 
-1.
+1a. To run in development mode:
 ```
 fastapi dev main.py
 ```
+
+1b. To run in production mode:
+```
+fastapi run main.py
+```
+
