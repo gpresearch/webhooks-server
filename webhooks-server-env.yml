@@ -5,7 +5,7 @@ channels:
 dependencies:
   # Python Version
   - pip
-  - python=3.10
+  - python=3.12
   # App Specific Dependencies
   - conda-forge:asyncpg
   - conda-forge:psycopg2  # ON UBUNTU: sudo apt install libpq-dev python3-dev
@@ -17,7 +17,7 @@ dependencies:
       - git+https://github.com/gpresearch/dblhava.git  # Lhava's private database repo
       - git+https://github.com/gpresearch/lhavaconfigs.git  # Lhava's private config management repo
       - git+https://github.com/gpresearch/pymetrics.git@v0.1.1#egg=pymetrics # `MetricsWriter`
-      - git+https://github.com/gpresearch/pylhava.git@v0.3.40  # Lhava's general python asset repo
+      - git+https://github.com/gpresearch/pylhava.git@feature/eng-467-fordefi-auth  # Lhava's general python asset repo
       - aiohttp_retry
       - async_lru
       - cachetools==5.4.0
@@ -25,3 +25,4 @@ dependencies:
       - pytest-timeout==2.3.1
       - pytimeparse2==1.7.1
       - pytest-cov==5.0.0
+      - solders==0.21.0
