@@ -11,7 +11,9 @@ HYPERNATIVE_FORDEFI_TRANSACTION_ID_HEADER = "Fordefi-Transaction-Id"
 
 
 utils.initialize_stdout_logger(enable_debug_logging=True)
-access_token = SecretsClient(secrets_path="/prod/webhooks-server", aws_region="ap-northeast-1").get_secret(RequiredSecrets.FORDEFI_ACCESS_TOKEN)
+
+access_token = SecretsClient(secrets_path="/dev/webhooks-server", aws_region="ap-northeast-1").get_secret(RequiredSecrets.ACCESS_TOKEN)
+
 init_rust_logging()
 metrics_client = MetricsWriter.new_influx(
     influx_url="http://localhost:8086",

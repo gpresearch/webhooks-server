@@ -1,5 +1,3 @@
-
-
 import aiohttp
 from utils import logger
 from pymetrics import MetricsWriter

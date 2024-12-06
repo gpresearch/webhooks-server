@@ -7,7 +7,7 @@ from botocore.exceptions import ClientError
 from utils import logger
 
 class RequiredSecrets(Enum):
-    FORDEFI_ACCESS_TOKEN = "ACCESS_TOKEN"
+    ACCESS_TOKEN = "ACCESS_TOKEN"
 
 
 class SecretsClient:

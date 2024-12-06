@@ -41,5 +41,5 @@ ENV PYTHONUNBUFFERED=1
 RUN conda env create -f webhooks-server-env.yml
 
 #https://pythonspeed.com/articles/activate-conda-dockerfile/
-ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "webhooks-server", "fastapi", "run", "api.py"]
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "webhooks-server", "uvicorn", "api:app"]
 
