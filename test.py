@@ -13,6 +13,7 @@ data = {
     }
 }
 
+
 bytes_data = struct.pack(
     '<BI',  # < for little-endian, B for u8, I for u32
     data["discriminator"]["data"],  # u8 value
